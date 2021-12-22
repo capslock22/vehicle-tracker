@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Vehicle Tracker View</title>
+<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBj8BxD5-XwopnZ8wyZxUBlUROEAhS-AC0&sensor=false"></script>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://localhost:8080/socket.io/socket.io.js"></script>
+<script src="viewer.js"></script>
+<script src="slider.js"></script>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,user-scalable=no" />
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div id="map_canvas"></div>
+
+<div id="settings">
+    <table id="vehiclelist">
+        <tr><th>name</th><th>min/km</th></tr>
+    </table>
+    <form>
+        <input type="checkbox" id="togglemap" name="togglemap"><label for="togglemap">Show o-map</label>
+        <label for="replayspeed">Replay time:</label><input id="replayspeed" name="replayspeed" type="range" min="100" max="5000" value="100" step="100"/>
+    </form>
+</div>
+
+</body>
+</html>
